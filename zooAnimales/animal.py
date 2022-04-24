@@ -11,9 +11,9 @@ class Animal:
     def movimiento(self):
         return "desplazarse"
 
-    # @classmethod
-    # def totalPorTipo(cls):
-    #     return f"Mamiferos: {len(Mamifero._listado)}\nAves: {len(Ave._listado)}\nReptiles: {len(Reptil._listado)}\nPeces: {len(Pez._listado)}\nAnfibios: {len(Anfibio._listado)}"
+    @classmethod
+    def totalPorTipo(cls):
+        return f"Mamiferos: {len(cls.Mamifero._listado)}\nAves: {len(cls.Ave._listado)}\nReptiles: {len(cls.Reptil._listado)}\nPeces: {len(cls.Pez._listado)}\nAnfibios: {len(cls.Anfibio._listado)}"
 
     def toString(self):
         if self._zona != None:
