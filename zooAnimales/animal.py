@@ -7,13 +7,20 @@ class Animal:
         self._habitat = habitat
         self._genero = genero
         self._zona = zona
+        Animal._totalAnimales += 1
 
     def movimiento(self):
         return "desplazarse"
 
     @classmethod
     def totalPorTipo(cls):
-        return f"Mamiferos: {len(cls.Mamifero._listado)}\nAves: {len(cls.Ave._listado)}\nReptiles: {len(cls.Reptil._listado)}\nPeces: {len(cls.Pez._listado)}\nAnfibios: {len(cls.Anfibio._listado)}"
+        from zooAnimales.mamifero import Mamifero
+        from zooAnimales.ave import Ave
+        from zooAnimales.reptil import Reptil
+        from zooAnimales.pez import Pez
+        from zooAnimales.anfibio import Anfibio
+
+        return f"Mamiferos : {len(Mamifero._listado)}\nAves : {len(Ave._listado)}\nReptiles : {len(Reptil._listado)}\nPeces : {len(Pez._listado)}\nAnfibios : {len(Anfibio._listado)}"
 
     def toString(self):
         if self._zona != None:

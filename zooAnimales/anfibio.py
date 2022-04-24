@@ -1,4 +1,3 @@
-from re import S
 from zooAnimales.animal import Animal
 
 class Anfibio(Animal):
