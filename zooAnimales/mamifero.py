@@ -22,7 +22,7 @@ class Mamifero(Animal):
     
     @classmethod
     def crearLeon(cls, nombre, edad, genero):
-        cls.caballos += 1
+        cls.leones += 1
         return Mamifero(nombre, edad, "selva", genero, True, 4)
 
     @classmethod
