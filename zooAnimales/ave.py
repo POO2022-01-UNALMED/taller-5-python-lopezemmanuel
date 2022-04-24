@@ -23,3 +23,17 @@ class Ave(Animal):
     def crearAguila(cls, nombre, edad, genero):
         cls.aguilas += 1
         return Ave(nombre, edad, "montanas", genero, "blanco y amarillo")
+
+    @classmethod
+    def getListado(cls):
+        return cls._listado
+
+    def getColorPlumas(self):
+        return self._colorPlumas
+
+    @classmethod
+    def setListado(cls, listado):
+        cls._listado = listado
+
+    def setColorPlumas(self, colorPlumas):
+        self._colorPlumas = colorPlumas

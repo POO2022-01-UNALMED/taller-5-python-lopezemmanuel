@@ -1,3 +1,4 @@
+from re import S
 from zooAnimales.animal import Animal
 
 class Anfibio(Animal):
@@ -24,3 +25,23 @@ class Anfibio(Animal):
     def crearSalamandra(cls, nombre, edad, genero):
         cls.salamandras += 1
         return Anfibio(nombre, edad, "selva", genero, "negro y amarillo", False)
+
+    @classmethod
+    def getListado(cls):
+        return cls._listado
+
+    def getColorPiel(self):
+        return self._colorPiel
+
+    def getVenenoso(self):
+        return self._venenoso
+
+    @classmethod
+    def setListado(cls, listado):
+        cls._listado = listado
+
+    def setColorPiel(self, colorPiel):
+        self._colorPiel = colorPiel
+
+    def setVenenoso(self, venenoso):
+        self._venenoso = venenoso

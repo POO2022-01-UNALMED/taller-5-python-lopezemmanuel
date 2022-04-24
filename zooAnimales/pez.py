@@ -24,3 +24,23 @@ class Pez(Animal):
     def crearBacalao(cls, nombre, edad, genero):
         cls.bacalaos += 1
         return Pez(nombre, edad, "oceano", genero, "gris", 6)
+
+    @classmethod
+    def getListado(cls):
+        return cls._listado
+
+    def getColorEscamas(self):
+        return self._colorEscamas
+
+    def getCantidadAletas(self):
+        return self._cantidadAletas
+
+    @classmethod
+    def setListado(cls, listado):
+        cls._listado = listado
+
+    def setColorEscamas(self, colorEscamas):
+        self._colorEscamas = colorEscamas
+
+    def setCantidadAletas(self, cantidadAletas):
+        self._cantidadAletas = cantidadAletas
